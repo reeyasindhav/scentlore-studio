@@ -22,7 +22,7 @@ export function Bottle({
       height={size * 1.45}
       viewBox="0 0 100 145"
       initial={animate ? { opacity: 0, y: 14 } : false}
-      animate={animate ? { opacity: 1, y: 0 } : undefined}
+      animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.9, ease: [0.22, 1, 0.36, 1] }}
       aria-hidden="true"
     >
