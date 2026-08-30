@@ -72,7 +72,7 @@ export function StoreProvider({ children }: { children: ReactNode }) {
   }, [user, collection, ready]);
 
   const signIn = useCallback((email: string, name?: string) => {
-    setUser({ email, name: name || email.split("@")[0].replace(/[._]/g, " ") });
+    setUser({ email, name: name || (email.split("@")[0] ?? "Collector").replace(/[._]/g, " ") });
   }, []);
 
   const value = useMemo<State>(
